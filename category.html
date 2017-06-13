@@ -1,0 +1,328 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title> </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/vendor/slider-pro.min.css"/>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    <body>
+
+        <header>
+        
+            <div class="container">
+
+                <div class="row">
+
+                    <div class=" menu__toggle col-xs-2 col-sm-1 col-md-1">
+                        <button class="menu__toggle__link">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                    <div class="col-xs-8 col-sm-10 col-md-3">
+                        <a href="index.html"><img class="image-logo" src="img/logo.png" alt="cut&go"></a>    
+                    </div>
+
+                    <div class="search__button__responsive col-xs-1 col-sm-1 col-md-1">
+                        <a href="#" onclick="Mudarestado('search__on')"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-9">
+
+                        <div class="search__button col-md-1">
+                            <a href="#" onclick="Mudarestado('search__on')"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+
+                        <nav class="menu">
+                            <ul>
+                                <li><a class="menu__link" href="index.html">Home</a></li>
+                                <li><a class="menu__link menu__link--active" href="category.html">Categorias</a></li>
+                                <li><a class="menu__link" href="blog.html">Blog</a></li>
+                                <li><a class="menu__link" href="contact.html">Contactos</a></li>
+                                <li><a class="menu__link cd-signin" href="#0">Minha Conta</a></li>
+                                <li><a class="menu__link" href="car.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ITEM</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- search-bar -->
+
+        <div class="search__box" id="search__on">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span><i class="fa fa-search" style="color: #59d4c1" aria-hidden="true"></i></span>
+                        <input class="search__bar" type="text" name="search" placeholder="Search..">
+                        <span onclick="document.getElementById('search__on').style.display='none'" class="close close__search" title="Close Search">&times;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--  -->
+
+        <div class="header__margin"></div>
+
+<!-- scroll-top -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="scrollToTop arrow" href="#">
+                        <span><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+<!--  -->
+
+<!-- modal  -->
+
+        <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+            <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+                <ul class="cd-switcher">
+                    <li><a class="modal__a" href="#0">Entrar</a></li>
+                    <li><a class="modal__a" href="#0">Registrar</a></li>
+                </ul>
+
+                <div id="cd-login"> <!-- log in form -->
+                    <form class="cd-form">
+                        <p class="fieldset">
+                            <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                            <input class="input__modal full-width has-padding has-border" id="signin-email" type="email" required placeholder="E-mail">
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-password" for="signin-password">Password</label>
+                            <input class="input__modal full-width has-padding has-border" id="signin-password" type="text" required placeholder="Password">
+                            <a href="#0" class="modal__a hide-password">Esconder</a>
+                        </p>
+
+                        <p class="fieldset">
+                            <input type="checkbox" id="remember-me" checked>
+                            <label for="remember-me">Lembrar-me</label>
+                        </p>
+
+                        <center><div class="g-recaptcha captcha" data-sitekey="6LcYpiEUAAAAAC_hYuTNB0_ET6FYUql4okPGNAu-"></div></center>
+                        
+                        <p class="fieldset">
+                            <input class="input__modal full-width" type="submit" value="Login">
+                        </p>
+
+                    </form>
+                    
+                    <p class="cd-form-bottom-message"><a class="modal__a" href="#0">Esqueceu a password?</a></p>
+                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                </div> <!-- cd-login -->
+
+                <div id="cd-signup"> <!-- sign up form -->
+                    <form class="cd-form">
+                        <p class="fieldset">
+                            <label class="image-replace cd-username" for="signup-username">Nome</label>
+                            <input class="input__modal full-width has-padding has-border" id="signup-username" type="text" required placeholder="Nome">
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                            <input class="input__modal full-width has-padding has-border" id="signup-email" type="email" required placeholder="E-mail">
+                        </p>
+
+                        <p class="fieldset">
+                            <label class="image-replace cd-password" for="signup-password">Password</label>
+                            <input class="input__modal full-width has-padding has-border" id="signup-password" type="text" required placeholder="Password">
+                            <a href="#0" class="modal__a hide-password">Esconder</a>
+                        </p>
+
+                        <p class="fieldset">
+                            <input required type="checkbox" id="accept-terms">
+                            <label for="accept-terms">Concordo com os <a href="#0">Termos</a></label>
+                        </p>
+
+                        <p class="fieldset">
+                            <input class="input__modal full-width has-padding" type="submit" value="Crear Conta">
+                        </p>
+                    </form>
+
+                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                </div> <!-- cd-signup -->
+
+                <div id="cd-reset-password"> <!-- reset password form -->
+                    <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+                    <form class="cd-form">
+                        <p class="fieldset">
+                            <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                            <input class="input__modal full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                            <span class="cd-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="fieldset">
+                            <input class="input__modal full-width has-padding" type="submit" value="Reset password">
+                        </p>
+                    </form>
+
+                    <p class="cd-form-bottom-message"><a class="modal__a" href="#0">Back to log-in</a></p>
+                </div> <!-- cd-reset-password -->
+                <a href="#0" class="modal__a cd-close-form">Close</a>
+            </div> <!-- cd-user-modal-container -->
+        </div> <!-- cd-user-modal -->
+
+<!--  -->
+
+        <div class="container category">
+
+            <div class="row">
+
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <a href=""><img width="100%" src="https://placeimg.com/640/480/animal" alt=""></a>
+                    <h3 class="category__title">Categoria 1</h3>
+                </div>
+
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <a href=""><img width="100%"  src="https://placeimg.com/640/480/people" alt=""></a>
+                    <h3 class="category__title">Categoria 2</h3>
+                </div>
+
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <a href=""><img width="100%"  src="https://placeimg.com/640/480/arch" alt=""></a>
+                    <h3 class="category__title">Categoria 3</h3>
+                </div>
+
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <a href=""><img width="100%"  src="https://placeimg.com/640/480/nature" alt=""></a>
+                    <h3 class="category__title">Categoria 4</h3>
+                </div>
+
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <a href=""><img width="100%"  src="https://placeimg.com/640/480/tech" alt=""></a>
+                    <h3 class="category__title">Categoria 5</h3>
+                </div>
+
+                <div class="col-md-4 col-xs-12 col-sm-6">
+                    <a href=""><img width="100%"  src="https://placeimg.com/640/480/any" alt=""></a>
+                    <h3 class="category__title">Categoria 6</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="category__fotter"></div>
+
+        <footer>
+            
+            <div class="container">
+                <div class="row">
+
+                <div class="footer__margin"></div>
+
+                    <div class="col-md-4">
+                        <a href="index.html"> <img class="logo__footer" src="img/logo-white.png" alt="cut&go"> </a>
+                        <div class="language">
+                            <a class="language__main" href="#">Português<img class="flags" src="img/flags/portugal.png"></a>
+                            <a class="language__main--active language__menu--none" href="#">Português<img class="flags" src="img/flags/portugal.png"></a>
+                            <ul class="language__menu language__menu--none">
+                                <li><a class="language__other" href="#">English<img class="flags" src="img/flags/united-kingdom.png"></a></li>
+                                <li><a class="language__other" href="#">Español<img class="flags" src="img/flags/spain.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h1 class="footer__title">Siga-Nos</h1>
+                        <div class="footer__titles"></div>
+
+                        <ul class="social">
+                            <li class="social__icons"><a class="social__icon" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="social__icons"><a class="social__icon" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="social__icons"><a class="social__icon" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="newsletter">
+                            <h1 class="footer__title">Newsletter</h1>
+                            <div class="footer__titles"></div>
+                            <P class="newsletter__subtitle">Subscreva A Nossa Newsletter</P>
+                            <p class="newsletter__description">Insira o seu endereço de e-mail em baixo para receber as últimas novidades</p>
+                            <form class="newsletter__form">
+                                <input class="newsletter__email" type="email" name="email1" required placeholder="Endereço de e-mail" multiple required="" /> 
+                                <input class="newsletter__submit" type="submit" name="submit1" value="&#xf054;" onclick="" />
+                            </form>    
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sub__footer">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div>
+                                <p class="copyright">©2017 cut&go. todos os direitos reservados</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="footer__menu">
+                                <ul>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="category.html">Categorias</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">Contactos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+        <script src="https://use.fontawesome.com/b9c52c738d.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="js/vendor/jquery.sliderPro.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
